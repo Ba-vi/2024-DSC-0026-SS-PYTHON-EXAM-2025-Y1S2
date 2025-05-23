@@ -4,7 +4,7 @@ from flask import Blueprint, jsonify, request
 from app.status_codes import HTTP_200_OK, HTTP_201_CREATED, HTTP_202_ACCEPTED, HTTP_400_BAD_REQUEST, HTTP_401_UNAUTHORIZED, HTTP_409_CONFLICT, HTTP_404_NOT_FOUND, HTTP_403_FORBIDDEN, HTTP_500_INTERNAL_SERVER_ERROR
 
 
-programs = Blueprint("programs", __name__, url_prefix='/api/v1/programs')
+programs = Blueprint('programs', __name__, url_prefix='/api/v1/programs')
 
 # creating a program
 @programs.route('/register', methods=['POST'])

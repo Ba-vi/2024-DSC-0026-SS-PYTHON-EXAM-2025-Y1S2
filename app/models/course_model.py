@@ -10,6 +10,7 @@ class Course(db.Model):
     name = db.Column(db.String(100), nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.now)
     updated_at = db.Column(db.DateTime, onupdate=datetime.now)
+    
     program_id = db.Column(db.Integer, db.ForeignKey('programs.program_id'), nullable=False)
 
 

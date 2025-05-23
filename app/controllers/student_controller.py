@@ -6,17 +6,17 @@ from app.status_codes import HTTP_200_OK, HTTP_201_CREATED, HTTP_202_ACCEPTED, H
 
 
 #registering a student
-students = Blueprint("students", __name__, url_prefix='/api/v1/students')
-@students.route("/register", methods=['POST'])
+students = Blueprint('students', __name__, url_prefix='/api/v1/students')
+@students.route('/register', methods=['POST'])
 def register_student():
 
     # storing the student details.
     data = request.get_json()
     id = data.get("id")
-    name = data.get('name')
-    email = data.get('email')
-    program_id = data.get('program_id')
-    contact = data.get('contact')
+    name = data.get("name")
+    email = data.get("email")
+    program_id = data.get("program_id")
+    contact = data.get("contact")
   
     # validating the student details by checking if all the attributes are provided.
     if not name or not email or not program_id or not contact or not id:

@@ -15,7 +15,7 @@ def register_course():
 
     if not name or not program_id or not id:
         return jsonify({"error": "All fields are required."}), HTTP_400_BAD_REQUEST
-    # registering new course details.
+    # registering new course details
     new_course = Course(
             id =id,
             name=name,
